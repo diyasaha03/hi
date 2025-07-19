@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Patterns - Modern Stories & Thoughts | Diya Saha</title>
+        <meta
+            name="description"
+            content="Welcome to Patterns - A modern blogging platform by Diya Saha featuring web development insights, stories, and creative thoughts."
+        />
+
+        <!-- Open Graph Tags -->
+        <meta
+            property="og:title"
+            content="Patterns - Modern Stories & Thoughts"
+        />
+        <meta
+            property="og:description"
+            content="A modern blogging platform featuring web development insights and creative thoughts by Diya Saha."
+        />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <h1 class="logo-title">Patterns</h1>
+                    <p class="logo-subtitle">Modern Stories & Thoughts</p>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="nav-menu">
+                    <a href="#home" class="nav-item active" data-page="home">
+                        <i data-lucide="home"></i>
+                        HOME
+                    </a>
+                    <a href="#blog" class="nav-item" data-page="blog">
+                        <i data-lucide="book-open"></i>
+                        BLOG
+                    </a>
+                    <a href="#stories" class="nav-item" data-page="stories">
+                        <i data-lucide="star"></i>
+                        STORIES
+                    </a>
+                    <a href="#portfolio" class="nav-item" data-page="portfolio">
+                        <i data-lucide="briefcase"></i>
+                        PORTFOLIO
+                    </a>
+                    <a href="#about" class="nav-item" data-page="about">
+                        <i data-lucide="user"></i>
+                        ABOUT
+                    </a>
+                    <a href="#contact" class="nav-item" data-page="contact">
+                        <i data-lucide="mail"></i>
+                        CONTACT US
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="header-left">
+                        <h2 class="page-title">Home</h2>
+                        <span class="page-description"
+                            >Welcome to our creative space</span
+                        >
+                    </div>
+
+                    <div class="header-right">
+                        <!-- Search -->
+                        <div class="search-container">
+                            <div class="search-input-wrapper">
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    placeholder="Search posts..."
+                                    class="search-input"
+                                />
+                                <i data-lucide="search" class="search-icon"></i>
+                                <button
+                                    type="button"
+                                    id="clearSearch"
+                                    class="clear-search"
+                                    style="display: none"
+                                >
+                                    <i data-lucide="x"></i>
+                                </button>
+                            </div>
+
+                            <!-- Search Results -->
+                            <div
+                                id="searchResults"
+                                class="search-results"
+                                style="display: none"
+                            ></div>
+                        </div>
+
+                        <button class="header-btn">
+                            <i data-lucide="bell"></i>
+                        </button>
+
+                        <button class="header-btn">
+                            <i data-lucide="user-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content Container -->
+            <div class="page-container">
+                <!-- Home Page -->
+                <div id="homePage" class="page active">
+                    <main class="main-section">
+                        <div id="blogGrid" class="blog-grid">
+                            <!-- Blog posts will be loaded here -->
+                            <div class="loading">Loading posts...</div>
+                        </div>
+                    </main>
+
+                    <!-- Popular Posts Sidebar -->
+                    <aside class="popular-posts-sidebar">
+                        <div class="sidebar-sticky">
+                            <h3 class="sidebar-title">POPULAR POSTS</h3>
+                            <div id="popularPosts" class="popular-posts-list">
+                                <div class="loading">Loading...</div>
+                            </div>
+
+                            <div class="recent-posts-section">
+                                <h3 class="sidebar-title">RECENT POSTS</h3>
+                                <div id="recentPosts" class="recent-posts-list">
+                                    <div class="loading">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- About Page -->
+                <div id="aboutPage" class="page">
+                    <main class="main-section">
+                        <div class="about-grid">
+                            <!-- Profile Card -->
+                            <div class="profile-card">
+                                <div class="avatar">
+                                    <i data-lucide="user"></i>
+                                </div>
+                                <h2 class="profile-name">Diya Saha</h2>
+                                <p class="profile-title">
+                                    Web Developer & BCA Graduate
+                                </p>
+                                <div class="profile-details">
+                                    <div class="detail-item">
+                                        <i data-lucide="map-pin"></i>
+                                        <span
+                                            >Siliguri, West Bengal, India</span
+                                        >
+                                    </div>
+                                    <div class="detail-item">
+                                        <i data-lucide="calendar"></i>
+                                        <span>Fresher / Entry-level</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- About Content -->
+                            <div class="about-content">
+                                <div class="about-section">
+                                    <h3 class="section-title">About Me</h3>
+                                    <div class="section-text">
+                                        <p>
+                                            Hi! I'm Diya Saha, a passionate web
+                                            developer and BCA graduate from
+                                            Siliguri Institute of Technology
+                                            under MAKAUT. I specialize in
+                                            building modern, responsive websites
+                                            with a clean and user-friendly
+                                            design.
+                                        </p>
+                                        <p>
+                                            Currently exploring different
+                                            aspects of front-end and back-end
+                                            development through internships and
+                                            hands-on projects. I'm eager to
+                                            learn new technologies and
+                                            contribute to meaningful projects
+                                            that make a difference.
+                                        </p>
+                                        <p>
+                                            My goal is to create web experiences
+                                            that are not only visually appealing
+                                            but also functional and accessible
+                                            to all users. I believe in
+                                            continuous learning and staying
+                                            updated with the latest web
+                                            development trends and best
+                                            practices.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-section">
+                                    <h3 class="section-title">
+                                        Skills & Technologies
+                                    </h3>
+                                    <div class="skills-grid">
+                                        <span class="skill-tag">HTML</span>
+                                        <span class="skill-tag">CSS</span>
+                                        <span class="skill-tag"
+                                            >JavaScript</span
+                                        >
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">C</span>
+                                        <span class="skill-tag"
+                                            >Tailwind CSS</span
+                                        >
+                                        <span class="skill-tag">VS Code</span>
+                                        <span class="skill-tag">Replit</span>
+                                        <span class="skill-tag"
+                                            >Responsive Design</span
+                                        >
+                                        <span class="skill-tag">GitHub</span>
+                                        <span class="skill-tag"
+                                            >UI/UX Fundamentals</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Contact Page -->
+                <div id="contactPage" class="page">
+                    <main class="main-section">
+                        <div class="contact-grid">
+                            <!-- Contact Form -->
+                            <div class="contact-form-section">
+                                <div class="form-header">
+                                    <i data-lucide="message-circle"></i>
+                                    <h3>Send a Message</h3>
+                                </div>
+
+                                <form id="contactForm" class="contact-form">
+                                    <div class="form-group">
+                                        <label for="name">Name *</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input
+                                            type="text"
+                                            id="subject"
+                                            name="subject"
+                                            placeholder="What is this about?"
+                                        />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message">Message *</label>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            placeholder="Tell me about your project or question..."
+                                            rows="6"
+                                            required
+                                        ></textarea>
+                                    </div>
+
+                                    <button type="submit" class="submit-btn">
+                                        <i data-lucide="send"></i>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="contact-info-section">
+                                <div class="contact-info-card">
+                                    <h3 class="section-title">Get in Touch</h3>
+                                    <div class="contact-methods">
+                                        <a
+                                            href="mailto:diyasaha.11slg@gmail.com"
+                                            class="contact-method"
+                                        >
+                                            <div class="contact-icon">
+                                                <i data-lucide="mail"></i>
+                                            </div>
+                                            <div class="contact-details">
+                                                <p class="contact-label">
+                                                    Email
+                                                </p>
+                                                <p class="contact-value">
+                                                    diyasaha.11slg@gmail.com
+                                                </p>
+                                            </div>
+                                        </a>
+
+                                        <a
+                                            href="tel:+917601957630"
+                                            class="contact-method"
+                                        >
+                                            <div class="contact-icon">
+                                                <i data-lucide="phone"></i>
+                                            </div>
+                                            <div class="contact-details">
+                                                <p class="contact-label">
+                                                    Phone
+                                                </p>
+                                                <p class="contact-value">
+                                                    +91 7601957630
+                                                </p>
+                                            </div>
+                                        </a>
+
+                                        <div class="contact-method">
+                                            <div class="contact-icon">
+                                                <i data-lucide="map-pin"></i>
+                                            </div>
+                                            <div class="contact-details">
+                                                <p class="contact-label">
+                                                    Location
+                                                </p>
+                                                <p class="contact-value">
+                                                    Siliguri, West Bengal, India
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="availability-card">
+                                    <div class="availability-header">
+                                        <i data-lucide="clock"></i>
+                                        <h4>Response Time</h4>
+                                    </div>
+                                    <div class="availability-text">
+                                        <p>
+                                            I typically respond within 24–48
+                                            hours.
+                                        </p>
+                                        <p>Currently available for:</p>
+                                        <p>
+                                            <strong
+                                                >• Internship
+                                                opportunities</strong
+                                            >
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >• Freelance projects</strong
+                                            >
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >• Collaboration on web
+                                                development</strong
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Blog Page -->
+                <div id="blogPage" class="page">
+                    <main class="main-section">
+                        <div id="allBlogGrid" class="blog-grid">
+                            <div class="loading">Loading all posts...</div>
+                        </div>
+                    </main>
+
+                    <aside class="popular-posts-sidebar">
+                        <div class="sidebar-sticky">
+                            <h3 class="sidebar-title">POPULAR POSTS</h3>
+                            <div
+                                id="blogPopularPosts"
+                                class="popular-posts-list"
+                            >
+                                <div class="loading">Loading...</div>
+                            </div>
+
+                            <div class="recent-posts-section">
+                                <h3 class="sidebar-title">RECENT POSTS</h3>
+                                <div
+                                    id="blogRecentPosts"
+                                    class="recent-posts-list"
+                                >
+                                    <div class="loading">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
